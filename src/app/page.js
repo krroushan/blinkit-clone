@@ -209,7 +209,7 @@ export default function Home() {
       <Header />
       <main className="max-w-7xl mx-auto px-4 py-6">
         {/* Main Banner */}
-        <div className="rounded-lg overflow-hidden mb-6 bg-green-600 relative">
+        <div className="rounded-lg overflow-hidden mb-6 bg-green-600 relative h-50">
           <div className="p-6 text-white relative z-10">
             <h2 className="text-2xl font-bold">Paan corner</h2>
             <p className="text-sm">Your favourite paan shop is now online</p>
@@ -230,7 +230,7 @@ export default function Home() {
 
         {/* Promotional Banners */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-          <div className="bg-teal-500 rounded-lg p-4 text-white relative overflow-hidden">
+          <div className="bg-teal-500 rounded-lg p-4 text-white relative overflow-hidden h-50">
             <div className="w-2/3">
               <h3 className="font-bold">Pharmacy at your doorstep!</h3>
               <p className="text-xs mt-1">Medicines, health drinks, testing kits & more</p>
@@ -249,7 +249,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="bg-yellow-500 rounded-lg p-4 text-white relative overflow-hidden">
+          <div className="bg-yellow-500 rounded-lg p-4 text-white relative overflow-hidden h-50">
             <div className="w-2/3">
               <h3 className="font-bold">Pet Care supplies in minutes</h3>
               <p className="text-xs mt-1">Food, toys & more</p>
@@ -268,7 +268,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="bg-purple-500 rounded-lg p-4 text-white relative overflow-hidden">
+          <div className="bg-purple-500 rounded-lg p-4 text-white relative overflow-hidden h-50">
             <div className="w-2/3">
               <h3 className="font-bold">No time for a diaper run?</h3>
               <p className="text-xs mt-1">Baby care essentials in minutes</p>
