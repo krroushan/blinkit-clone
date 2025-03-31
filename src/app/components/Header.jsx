@@ -17,6 +17,20 @@ const Header = () => {
   
   const [currentPlaceholderIndex, setCurrentPlaceholderIndex] = useState(0);
   const [animationState, setAnimationState] = useState('visible'); // 'visible', 'exit', 'enter'
+  const [isScrolled, setIsScrolled] = useState(false);
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   
   useEffect(() => {
     const interval = setInterval(() => {
@@ -42,7 +56,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="flex items-center justify-between px-6 bg-white h-[86px] border-b border-[#eeeeee]">
+    <header className={`flex items-center justify-between px-6 bg-white h-[86px] border-b border-[#eeeeee] sticky top-0 z-50 w-full transition-shadow duration-300 ${isScrolled ? 'shadow-md' : ''}`}>
       {/* Logo */}
       <div className="flex items-center h-full">
         <Link href="/" className="mr-6">
